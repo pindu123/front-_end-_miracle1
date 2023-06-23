@@ -1,0 +1,50 @@
+<div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#orders">Orders</a>
+    <a href="#cart">cart</a>
+    <a href="#contact" routerLink="/contact" routerLinkActive="active">Contact</a>
+    <input type="text" placeholder="Search..">
+    <div class="topnav-right">
+      <a href="#register" routerLink="/reg" routerLinkActive="active">Register</a>
+      <a href="#login" routerLink="/login" routerLinkActive="active">Login</a>
+    </div>
+    </div>
+<div class="welcome">
+    <h1>Miracle Stores</h1>
+    <p>Shop the latest trends in fashion, electronics, and more.</p>
+</div>
+<div>
+   
+
+  <p-table [value]="posts">
+    <ng-template pTemplate="header">
+        <tr>
+          <th>ProductId</th>
+          <th>Category</th>
+          <th>Description</th>
+          <th>Image</th>
+          <th>Price</th>
+          <th>Productname</th>
+          <th>......</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-post>
+      <tr>
+        <td>{{post.productid}}</td>
+        <td>{{post.category}}</td>
+        <td>{{post.description}}</td>
+        <td><img src="{{post.prefix+post.image}}" height="70px" width="70px" ></td>
+        <td>{{post.price}}</td>
+        <td>{{post.productname}}</td>
+        <td>
+          <p-button (click)="addToCart(post)">Add to cart</p-button>
+        </td>
+      </tr>
+    </ng-template>
+</p-table>
+  </div>
+  
+  <footer>
+      <p>&copy; 2023 Your Miracle Store. All rights reserved.</p>
+    </footer>
+  

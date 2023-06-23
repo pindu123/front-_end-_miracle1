@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #aa0404;
+  color: white;
+}
+.topnav input[type=text] {
+    float: center;
+    width: 15cm;
+    padding: 10px;
+    margin-top: 8px;
+    margin-right: 35px;
+    margin-left: 120px;
+    border: none;
+    font-size: 17px;
+  }
+.topnav-right {
+  float: right;
+}
+  .welcome{
+    background-image: url("/assets/banner2.jpg");
+    background-size: cover;
+    text-align: center;
+    padding: 8px;
+    color: black;
+    font-size:15px;
+  }
+  .list{
+    float: left;
+    background-image: url("/assets/list.jpg");
+    padding: 120px 50px;
+  }
+  
+  .column {
+    text-align: center;
+    float: left;
+    width: 33%;
+    padding: 35px;
+  }
+
+  .row::after {
+    background-image: url("/assets/banner2.jpg");
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 50px;
+    text-align: center;
+  }

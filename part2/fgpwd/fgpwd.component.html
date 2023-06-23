@@ -1,0 +1,40 @@
+<body class="body">
+    <div style="text-align: center;" class="i">
+      <h2>Forgot Password</h2>
+      <form [formGroup]="sampleform" name="sampleform">
+    
+        <div class="email">
+          <label>Email:</label>
+          <input type="email" pInputText formControlName="email" name="email" placeholder="Email">
+          <span style="color:red" *ngIf="sampleform.get('email')?.invalid && sampleform.get('email')?.dirty">
+            <br>
+            <span *ngIf="sampleform.get('email')?.errors?.required">Email is required.</span>
+          </span>
+        </div>
+        <br>
+    
+        <div class="password">
+          <label>Password:</label>
+          <input type="password" pInputText formControlName="password" name="password" placeholder="Password" required>
+          <span style="color:red" *ngIf="sampleform.get('password')?.invalid && sampleform.get('password')?.dirty">
+            <span *ngIf="sampleform.get('password')?.errors?.required">Password should be at least 8 characters.</span>
+          </span>
+        </div>
+        <br>
+    
+        <!-- <div class="cp">
+          <label>Confirm Password:</label>
+          <input type="password" pInputText formControlName="confirmpassword" name="confirmpassword" placeholder="Confirm Password" required>
+          <span style="color:red" *ngIf="sampleform.get('confirmpassword')?.invalid && sampleform.get('confirmpassword')?.dirty">
+            <span *ngIf="sampleform.get('confirmpassword')?.errors?.required">Password should be same</span>
+          </span>
+          <span class="password-toggle" ng-click="togglePasswordVisibility()">
+            <i class="fa" ng-class="{'fa-eye': !showPassword, 'fa-eye-slash': showPassword}"></i>
+          </span>
+        </div>
+        <br> -->
+    
+        <button  (click)="submit()" [disabled]="sampleform.invalid" routerLink="/login" routerLinkActive="active">Submit</button>
+      </form>
+    </div>
+    </body>

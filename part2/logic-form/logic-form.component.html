@@ -1,0 +1,73 @@
+<!-- <body>
+  <div class="lg">
+    <p style="padding: auto;color: blue; text-align: center;font-size: 25px;">Enter User Login details</p>
+  <form [formGroup]="myForm"  >
+    <label>Username:</label>
+  
+  <input type="text" pInputText (input)="onUserInput($event)" formControlName="email"/>
+  
+    <p class="error" *ngIf="myForm.get('email')?.touched &&myForm.get('email')?.hasError('required')">*username required</p>
+    <p class="error" *ngIf="myForm.get('email')?.dirty &&myForm.get('email')?.hasError('email')">*not valid email</p>
+    <br>
+  <label>Password:</label>
+  
+  
+  <p-password  type="password" (input)="onUserInput($event)" formControlName="password" [toggleMask]="true"></p-password>
+  
+    <p class="error" *ngIf="myForm.get('password')?.touched &&myForm.get('password')?.hasError('required')">*password required</p>
+    <p class="error" *ngIf="myForm.get('password')?.touched &&myForm.get('password')?.hasError('minlength') &&myForm.get('password')?.hasError('pattern')">*should be atleast 10 characters and have 1 uppercase, 1 lowercase, 1 number, 1 specialchar</p>
+  
+  <br>
+  <br>
+  <a style href="" title="Forgot Password" routerLink="/fgpwd" routerLinkActive="active" >Forgot Password?</a>
+  <br><br>
+    <p-button  type="submit" (click)="fetch()"[disabled]="isDisabled" routerLink="/shopnow" routerLinkActive="active">Login</p-button>
+  
+  </form>
+  </div>
+
+</body>   -->
+
+  <body>
+    <br>
+
+    <div class="login-container">
+    <!-- <h2 style="color: red; font-size: 120%;font-weight: bold;">{{this.displayName}}</h2> -->
+
+    <form  [formGroup]="myForm" action="">
+        <div class="headingsContainer">
+            <!-- <p-avatar icon="pi pi-user" shape="circle" size="large" [style]="{'background-color': '#155799', 'color': '#ffffff'}"></p-avatar> -->
+
+            <h2 class="lo">Login</h2>
+            <p class="lo1">login with your username and password</p>
+        </div>
+
+        <div class="mainContainer">
+
+           &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="pi pi-user" style="font-size: 0.9rem;color:rgb(245, 243, 240);"></i>&nbsp;
+
+            <label >Username:-</label>
+            &nbsp; <input type="text" placeholder="Enter Username" pInputText formControlName="email"><br><br>
+
+            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="pi pi-lock" style="font-size: 0.9rem"></i>&nbsp;
+            <label >Password:-&nbsp;&nbsp;</label>
+
+            <p-password class="pass" [toggleMask]="true" type="password" placeholder="Enter Password"  formControlName="password"></p-password><br><br>
+            
+                <div class="subcontainer">
+                <p class="forgotpsd"> <a routerLink="/fgpwd" routerLinkActive="active"> Forgot Password?</a></p>
+            </div>
+
+
+            <p-button styleClass="p-button-raised p-button-text" (click)="fetch()" class="lg">Login</p-button>
+            <!-- <p class="error-message" *ngIf="errorMessage">{{ errorMessage }}</p> -->
+            <p class="register">Not a member?  <a routerLink="/reg" routerLinkActive="active">Register here!</a></p>
+
+        </div>
+
+    </form>
+</div>
+<!-- <footer>
+  <p>&copy; 2023 Your Miracle Store. All rights reserved.</p>
+</footer> -->
+</body>  
